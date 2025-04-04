@@ -1,18 +1,14 @@
-# Quartz v4
+🧠 Персональный репозиторий знаний Пак Павла
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+**Техническая база для сайта** → [parkpavel.github.io/park-pavel/](https://parkpavel.github.io/park-pavel/)  
+*Создано с использованием [Quartz 4](https://github.com/jackyzha0/quartz) + Obsidian.*
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+---
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+### 📌 **Что здесь хранится?**
+1. **Контент сайта**  
+   - `/content` — заметки Obsidian (публичные статьи, материалы ретритов, личная база знаний).
+   - `/data` — метаданные для навигации по темам.
+2. **Конфигурация Quartz**  
+   - Кастомизация темы, плагины, настройки SEO в `quartz.config.ts`.
+   - Генерируемые файлы (HTML, CSS) — в ветке `gh-pages`.

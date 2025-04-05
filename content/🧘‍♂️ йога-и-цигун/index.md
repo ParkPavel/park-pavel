@@ -1,7 +1,6 @@
 ---
 title: Йога и Ци-Гун
 description: Йога и Ци-Гун
-draft: false
 tags:
   - "#Йога"
   - "#Ци-Гун"

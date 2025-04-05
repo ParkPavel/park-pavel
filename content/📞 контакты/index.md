@@ -1,6 +1,6 @@
 ---
 title: Контакты
-description: 
+description: Контакты
 draft: false
 tags:
   - "#Контакты"

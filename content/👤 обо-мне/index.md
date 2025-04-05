@@ -1,7 +1,6 @@
 ---
 title: Биография
 description: Моя история
-draft: false
 ---
 ## Обо мне
 

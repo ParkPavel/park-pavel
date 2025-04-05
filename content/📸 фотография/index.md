@@ -1,7 +1,6 @@
 ---
 title: Фотография
-description: 
-draft: false
+description: Фотография
 tags:
   - "#Фотография"
 ---

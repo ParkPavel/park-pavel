@@ -49,3 +49,5 @@ export {
   Flex,
   ConditionalRender,
 }
+
+export { default as HomepageCover } from "./HomepageCover"

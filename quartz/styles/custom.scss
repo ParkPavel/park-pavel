@@ -1,3 +1,75 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+$light-theme: (
+  primary-bg: #ccccb4,
+  primary-text: #141414,
+  accent: #17241e,
+  secondary-accent: #0aeeee,
+  highlight: #2e8ebb,
+);
+
+$dark-theme: (
+  primary-bg: #1f2130,
+  primary-text: #F5F5DC,
+  accent: #8FBC8F,
+  secondary-accent: #9c5fff,
+  highlight: #00eeff,
+);
+
+:root {
+  @each $key, $value in $light-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+:root[saved-theme="dark"] {
+  @each $key, $value in $dark-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+body {
+  background-color: var(--primary-bg) !important;
+  color: var(--primary-text) !important;
+  font-family: var(--bodyFont) !important;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  &:hover {
+    color: var(--secondary-accent);
+  }
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: var(--headerFont);
+  &:hover {
+    background-color: var(--secondary-accent);
+  }
+}
+
+.homepage-cover {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Отступ между обложкой и заголовком */
+}
+
+.homepage-cover img {
+  display: none; /* Скрываем все изображения по умолчанию */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Скругление углов */
+}
+
+:root[saved-theme="light"] .homepage-cover .cover-light {
+  display: block !important; /* Показываем обложку для светлого режима */
+}
+
+:root[saved-theme="dark"] .homepage-cover .cover-dark {
+  display: block !important; /* Показываем обложку для тёмного режима */
+}

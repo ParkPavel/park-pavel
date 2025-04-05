@@ -17,11 +17,12 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    // Условно рендерим обложку только на главной странице
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+      component: Component.HomepageCover(),
+      condition: (page) => page.fileData.slug === "index", // Только для главной страницы
     }),
-    Component.ArticleTitle(),
+    Component.ArticleTitle(), // Заголовок рендерится после обложки
     Component.ContentMeta(),
     Component.TagList(),
   ],

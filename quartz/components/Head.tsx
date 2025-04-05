@@ -34,7 +34,9 @@ export default (() => {
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     )
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/favicon.png`
+    const ogImageLightPath = `https://${cfg.baseUrl}/static/og-imagelight.png`
+    const ogImageDarkPath = `https://${cfg.baseUrl}/static/og-imagedark.png`
 
     return (
       <head>
@@ -70,6 +72,21 @@ export default (() => {
             <meta
               property="og:image:type"
               content={`image/${getFileExtension(ogImageDefaultPath) ?? "png"}`}
+            />
+            {/* Обложка для светлого режима */}
+            <meta property="og:image" content={ogImageLightPath} />
+            <meta name="twitter:image" content={ogImageLightPath} />
+
+            {/* Обложка для тёмного режима */}
+            <meta
+              property="og:image"
+              content={ogImageDarkPath}
+              media="(prefers-color-scheme: dark)"
+            />
+            <meta
+              name="twitter:image"
+              content={ogImageDarkPath}
+              media="(prefers-color-scheme: dark)"
             />
           </>
         )}

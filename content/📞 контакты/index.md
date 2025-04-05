@@ -1,0 +1,17 @@
+---
+title: Контакты
+description: 
+draft: false
+tags:
+  - "#Контакты"
+---
+
+## 🔗 Связь и соцсети
+
+Буду рад общению, сотрудничеству и новым проектам. Подписывайтесь, следите, вдохновляйтесь:
+
+- [Instagram](https://www.instagram.com/parkpavel_chigon/)
+- [Telegram](https://t.me/parkpavel)
+- [WhatsApp](https://api.whatsapp.com/send?phone=79149199138)
+- [VK](https://vk.com/park.pavel)
+- [i@pavelpak.ru](mailto:i@pavelpak.ru)

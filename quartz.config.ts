@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#F5F5DC", // Бежевый
+          light: "#F5F5DC", 
           lightgray: "#E5E5E5",
           gray: "#B8B8B8",
           darkgray: "#4E4E4E",
-          dark: "#2F4F4F", // Темный серо-зеленый
-          secondary: "#556B2F", // Оливковый зеленый
-          tertiary: "#8FBC8F", // Светло-зеленый
-          highlight: "rgba(143, 188, 143, 0.15)", // Мягкий зеленый
-          textHighlight: "#FFD70088", // Золотистый
+          dark: "#2F4F4F", 
+          secondary: "#556B2F", 
+          tertiary: "#8FBC8F", 
+          highlight: "rgba(143, 188, 143, 0.15)", 
+          textHighlight: "#FFD70088", 
         },
         darkMode: {
-          light: "#2F4F4F", // Темный серо-зеленый
+          light: "#2F4F4F", 
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#D4D4D4",
-          dark: "#F5F5DC", // Бежевый
-          secondary: "#8FBC8F", // Светло-зеленый
-          tertiary: "#rgba(14, 199, 231, 0.53)", // Золотистый
-          highlight: "rgba(143, 188, 143, 0.15)", // Мягкий зеленый
-          textHighlight: "#FFD70088", // Золотистый
+          dark: "#F5F5DC", 
+          secondary: "#8FBC8F", 
+          tertiary: "#rgba(14, 199, 231, 0.53)", 
+          highlight: "rgba(143, 188, 143, 0.15)", 
+          textHighlight: "#FFD70088", 
         },
       },
     },

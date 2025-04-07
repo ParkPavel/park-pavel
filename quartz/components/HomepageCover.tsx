@@ -2,7 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor } from "./types"
 
 const HomepageCover: QuartzComponent = ({ cfg }) => {
   // Убедимся, что baseUrl корректно формируется
-  const baseUrl = cfg.baseUrl?.endsWith("/") ? cfg.baseUrl : `${cfg.baseUrl}/`
+ const baseUrl = cfg.baseUrl?.endsWith("/") ? cfg.baseUrl : `${cfg.baseUrl ?? ""}/`
 
   return (
     <div className="homepage-cover">

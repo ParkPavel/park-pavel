@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ru-RU",
-    baseUrl: "/park-pavel/",
+    baseUrl: "/q",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -36,7 +36,7 @@ const config: QuartzConfig = {
           dark: "#2F4F4F", 
           secondary: "#556B2F", 
           tertiary: "#8FBC8F", 
-          highlight: "rgba(143, 188, 143, 0.15)", 
+          highlight: "rgba(109, 211, 109, 0.49)", 
           textHighlight: "#FFD70088", 
         },
         darkMode: {

@@ -1,19 +1,19 @@
 @use "./base.scss";
 
 $light-theme: (
-  primary-bg: #ccccb4,
-  primary-text: #141414,
-  accent: #17241e,
-  secondary-accent: #0aeeee,
-  highlight: #2e8ebb,
+  primary-bg: #e6d9a1,
+  primary-text: #0f0e0e,
+  accent: #0c3330,
+  secondary-accent: #4e945f6e,
+  highlight: #0dc2c9,
 );
 
 $dark-theme: (
-  primary-bg: #1f2130,
-  primary-text: #F5F5DC,
+  primary-bg: #070d1d,
+  primary-text: #fff59d,
   accent: #8FBC8F,
-  secondary-accent: #9c5fff,
-  highlight: #00eeff,
+  secondary-accent: #24b1b6b7,
+  highlight: #1dbcc7,
 );
 
 :root {

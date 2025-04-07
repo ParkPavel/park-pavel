@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor } from "./types"
-import * as Component from "./index" // Импортируем объект Component
 
 const HomepageCover: QuartzComponent = ({ cfg }) => {
+  // Убедимся, что baseUrl корректно формируется
   const baseUrl = cfg.baseUrl?.endsWith("/") ? cfg.baseUrl : `${cfg.baseUrl}/`
 
   return (
@@ -12,7 +12,4 @@ const HomepageCover: QuartzComponent = ({ cfg }) => {
   )
 }
 
-export default Component.ConditionalRender({
-  component: HomepageCover,
-  condition: (page) => page.fileData.slug === "index", // Только для главной страницы
-}) satisfies QuartzComponentConstructor
+export default (() => HomepageCover) satisfies QuartzComponentConstructor

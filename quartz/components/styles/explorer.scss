@@ -259,6 +259,19 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         stroke: var(--darkgray);
       }
     }
+
+    .mobile-explorer {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 101;
+      margin: 0;
+      padding: 0.5rem;
+      background-color: var(--light);
+      border: 1px solid var(--lightgray);
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 

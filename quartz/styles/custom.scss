@@ -1,7 +1,7 @@
 @use "./base.scss";
 
 $light-theme: (
-  primary-bg: #e6d9a1,
+  primary-bg: #f3eccf,
   primary-text: #0f0e0e,
   accent: #0c3330,
   secondary-accent: #4e945f6e,
@@ -9,7 +9,7 @@ $light-theme: (
 );
 
 $dark-theme: (
-  primary-bg: #070d1d,
+  primary-bg: #050811,
   primary-text: #fff59d,
   accent: #8FBC8F,
   secondary-accent: #24b1b6b7,
@@ -28,17 +28,29 @@ $dark-theme: (
   }
 }
 
+// Optimize typography
 body {
   background-color: var(--primary-bg) !important;
   color: var(--primary-text) !important;
   font-family: var(--bodyFont) !important;
+  line-height: 1.65;
+  letter-spacing: 0;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: all 0.2s ease;
+
   &:hover {
     color: var(--secondary-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
   }
 }
 
@@ -72,4 +84,106 @@ button {
 
 :root[saved-theme="dark"] .homepage-cover .cover-dark {
   display: block !important; /* Показываем обложку для тёмного режима */
+}
+
+// Header refinements for multilingual
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+// Article text optimization
+article {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  font-size: 1.05rem;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
+// Code block adjustments
+pre, code {
+  font-size: 0.95em;
+  letter-spacing: -0.02em;
+}
+
+.sidebar {
+  background: rgba(var(--light), 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+input {
+  border-radius: 6px;
+  border: 1px solid var(--lightgray);
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+
+  &:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(var(--secondary), 0.1);
+  }
+}
+
+.tags {
+  gap: 0.5rem;
+  
+  a.internal {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.graph {
+  .graph-outer {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.darkmode {
+  border-radius: 6px;
+  padding: 0.5rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    opacity: 1;
+    background: rgba(var(--gray), 0.1);
+  }
+}
+
+.toc {
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(var(--light), 0.03);
+  
+  h3 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+  }
 }

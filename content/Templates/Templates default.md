@@ -1,7 +1,6 @@
 ---
 title: <% tp.file.title %>
-draft: true
+description: <% tp.file.title %>
 tags:
   - "#"
 ---
- 

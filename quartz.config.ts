@@ -8,8 +8,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Park pavel",
-    pageTitleSuffix: "",
+    pageTitle: "Пак Павел",
+    pageTitleSuffix: "Цифровой сад",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -23,32 +23,45 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        title: {
+          name: "Bitter",
+          weights: [400, 500, 700],
+          includeItalic: true,
+        },
+        header: {
+          name: "Open Sans",
+          weights: [400, 500, 600],
+          includeItalic: true,
+        },
+        body: {
+          name: "PT Sans",
+          weights: [400, 700],
+          includeItalic: true,
+        },
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#F5F5DC", 
-          lightgray: "#E5E5E5",
-          gray: "#B8B8B8",
-          darkgray: "#4E4E4E",
-          dark: "#2F4F4F", 
-          secondary: "#556B2F", 
-          tertiary: "#8FBC8F", 
-          highlight: "rgba(109, 211, 109, 0.49)", 
-          textHighlight: "#FFD70088", 
+          light: "#fdfbf7",      // Soft cream white
+          lightgray: "#e5e6e4",  // Light sage
+          gray: "#b8c1bc",       // Muted sage
+          darkgray: "#424a45",   // Deep forest gray
+          dark: "#2d332f",       // Forest charcoal
+          secondary: "#687864",  // Sage green
+          tertiary: "#819b7d",   // Forest mint
+          highlight: "#e9f0e6",  // Light mint highlight
+          textHighlight: "#f0f7ed", // Softer mint highlight
         },
         darkMode: {
-          light: "#2F4F4F", 
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#D4D4D4",
-          dark: "#F5F5DC", 
-          secondary: "#8FBC8F", 
-          tertiary: "#rgba(14, 199, 231, 0.53)", 
-          highlight: "rgba(143, 188, 143, 0.15)", 
-          textHighlight: "#FFD70088", 
+          light: "#1a1d1c",      // Deep charcoal
+          lightgray: "#2a2e2d",  // Darker sage
+          gray: "#9ba69f",       // Muted sage
+          darkgray: "#d8e0d5",   // Light sage
+          dark: "#eef2eb",       // Off white
+          secondary: "#90a898",  // Sage green
+          tertiary: "#708b78",   // Forest mint
+          highlight: "#2d3831",  // Deep forest highlight
+          textHighlight: "#3a483e", // Darker forest highlight
         },
       },
     },

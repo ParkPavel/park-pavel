@@ -5,11 +5,13 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.JivoChat(), // Add Jivo chat component
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/ParkPavel/park-pavel",
-      "Telegram": "https://t.me/parkpavel",
+      Telegram: "https://t.me/parkpavel",
     },
   }),
 }

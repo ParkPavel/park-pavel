@@ -22,6 +22,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import JivoChat from "./JivoChat"
 
 export {
   ArticleTitle,
@@ -48,6 +49,7 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  JivoChat,
 }
 
 export { default as HomepageCover } from "./HomepageCover"

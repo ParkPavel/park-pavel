@@ -1,7 +1,6 @@
 ---
 title: Контакты
 description: Контакты
-draft: false
 tags: []
 ---
 

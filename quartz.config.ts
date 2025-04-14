@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: {
       provider: "google",
-      tagId: '<G-PWSGWTQ0NR>',
+      tagId: "<G-PWSGWTQ0NR>",
     },
     locale: "ru-RU",
     baseUrl: "/park-pavel/",

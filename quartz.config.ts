@@ -13,7 +13,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "google",
+      tagId: "G-PWSGWTQ0NR",
     },
     locale: "ru-RU",
     baseUrl: "/park-pavel/",

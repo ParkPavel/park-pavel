@@ -12,7 +12,6 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/ParkPavel/park-pavel",
       Telegram: "https://t.me/parkpavel",
-      "Согласие на обработку персональных данных": "https://parkpavel.github.io/park-pavel/PS-Приложения-к-сайту/Согласие-на-обработку-персональных-данных",
     },
   }),
 }
@@ -28,6 +27,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(), // Заголовок рендерится после обложки
     Component.ContentMeta(),
     Component.TagList(),
+    Component.Carousel(), // Add the Carousel component here with empty options
   ],
   left: [
     Component.PageTitle(),

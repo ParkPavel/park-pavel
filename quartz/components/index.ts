@@ -23,9 +23,11 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import JivoChat from "./JivoChat"
+import Carousel from "./Carousel" // Import the new Carousel component
 
 export {
   ArticleTitle,
+  Carousel, // Export the new Carousel component
   Content,
   TagContent,
   FolderContent,

@@ -1,7 +1,7 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 function ProfilePhoto({ displayClass }: QuartzComponentProps) {
-  const profilePhotoUrl = "/Profilephoto.jpg"; // Use new local path
+  const profilePhotoUrl = "/myfiles/Profilephoto.jpg"; // Use new local path in myfiles
   // Remove aboutPageUrl
   // const aboutPageUrl = "/Обо мне/";
 

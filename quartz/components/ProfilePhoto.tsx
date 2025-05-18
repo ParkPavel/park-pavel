@@ -1,7 +1,7 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 function ProfilePhoto({ displayClass }: QuartzComponentProps) {
-  const profilePhotoUrl = "/Profilephoto.jpg"; // Use path relative to quartz/static
+  const profilePhotoUrl = "https://parkpavel.github.io/park-pavel/Profilephoto.jpg"; // Use full absolute URL for testing
   // Remove aboutPageUrl
   // const aboutPageUrl = "/Обо мне/";
 

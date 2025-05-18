@@ -18,7 +18,6 @@
     const modalPrevButton = modalContent?.querySelector('.modal-prev') as HTMLButtonElement | null; // Cast to HTMLButtonElement
     const modalNextButton = modalContent?.querySelector('.modal-next') as HTMLButtonElement | null; // Cast to HTMLButtonElement
 
-
     if (!albumPrevButton || !albumNextButton || !albumTitleElement || !photoGridElement || !modalOverlay || !modalContent || !modalCloseButton || !modalImageElement || !modalPrevButton || !modalNextButton) {
         console.error("One or more gallery elements not found.");
         return;

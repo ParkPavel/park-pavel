@@ -19,22 +19,26 @@ export const sharedPageComponents: SharedLayout = {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    // Условно рендерим обложку только на главной странице
-    Component.ConditionalRender({
-      component: Component.HomepageCover(),
-      condition: (page) => page.fileData.slug === "index", // Только для главной страницы
-    }),
-    // Добавляем фото профиля только на главной странице
-    Component.ConditionalRender({
-      component: ProfilePhoto(),
-      condition: (page) => page.fileData.slug === "index", // Только для главной страницы
-    }),
-    Component.ArticleTitle(), // Заголовок рендерится после обложки
-    Component.ContentMeta(),
-    Component.TagList(),
-    Component.Carousel(), // Add the Carousel component here with empty options
-  ],
+      beforeBody: [
+        // Условно рендерим обложку только на главной странице
+        Component.ConditionalRender({
+          component: Component.HomepageCover(),
+          condition: (page) => page.fileData.slug === "index", // Только для главной страницы
+        }),
+        // Фото профиля и заголовок рядом на главной странице
+        Component.ConditionalRender({
+          condition: (page) => page.fileData.slug === "index", // Только для главной страницы
+          component: Component.Flex({
+            components: [
+              { Component: ProfilePhoto() },
+              { Component: Component.ArticleTitle(), grow: true }, // Заголовок рядом с фото
+            ],
+          }),
+        }),
+        Component.ContentMeta(),
+        Component.TagList(),
+        Component.Carousel(), // Add the Carousel component here with empty options
+      ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),

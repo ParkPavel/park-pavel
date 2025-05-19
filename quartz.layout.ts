@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import ProfilePhoto from "./quartz/components/ProfilePhoto"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -22,6 +23,11 @@ export const defaultContentPageLayout: PageLayout = {
     // Условно рендерим обложку только на главной странице
     Component.ConditionalRender({
       component: Component.HomepageCover(),
+      condition: (page) => page.fileData.slug === "index", // Только для главной страницы
+    }),
+    // Добавляем фото профиля только на главной странице
+    Component.ConditionalRender({
+      component: ProfilePhoto(),
       condition: (page) => page.fileData.slug === "index", // Только для главной страницы
     }),
     Component.ArticleTitle(), // Заголовок рендерится после обложки

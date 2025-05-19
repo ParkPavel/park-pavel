@@ -6,8 +6,8 @@ const HomepageCover: QuartzComponent = ({ cfg }) => {
 
   return (
     <div className="homepage-cover">
-      <img src={`${baseUrl}static/og-imagelight.png`} alt="Обложка для светлого режима" className="cover-light" />
-      <img src={`${baseUrl}static/og-imagedark.png`} alt="Обложка для тёмного режима" className="cover-dark" />
+      <img src="/og-imagelight.png" alt="Обложка для светлого режима" className="cover-light" />
+      <img src="/og-imagedark.png" alt="Обложка для тёмного режима" className="cover-dark" />
     </div>
   )
 }

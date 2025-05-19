@@ -30,7 +30,7 @@ export const defaultContentPageLayout: PageLayout = {
           condition: (page) => page.fileData.slug === "index", // Только для главной страницы
           component: Component.Flex({
             components: [
-              { Component: ProfilePhoto() },
+              { Component: ProfilePhoto(), basis: "150px" }, // Устанавливаем базовую ширину для фото
               { Component: Component.ArticleTitle(), grow: true }, // Заголовок рядом с фото
             ],
           }),

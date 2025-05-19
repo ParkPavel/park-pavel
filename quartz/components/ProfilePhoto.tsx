@@ -19,8 +19,8 @@ ProfilePhoto.css = `
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
+  width: 150px !important;
+  height: 150px !important;
   border-radius: 10px; /* Rounded corners */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   transition: transform 0.3s ease; /* Smooth transition for hover effect */

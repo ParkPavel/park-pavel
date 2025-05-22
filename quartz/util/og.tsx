@@ -167,6 +167,14 @@ export type ImageOptions = {
    * full file data of current page
    */
   fileData: QuartzPluginData
+  /**
+   * Base64 data URL for the custom OG image
+   */
+  customOgImageBase64?: string
+  /**
+   * Base64 data URL for the custom icon
+   */
+  customIconBase64?: string
 }
 
 // This is the default template for generated social image.
@@ -177,6 +185,8 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
   description,
   fileData,
   iconBase64,
+  customOgImageBase64, // Added custom OG image base64
+  customIconBase64, // Added custom icon base64
 }) => {
   const { colorScheme } = userOpts
   const fontBreakPoint = 32
@@ -207,8 +217,25 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
         backgroundColor: cfg.theme.colors[colorScheme].light,
         padding: "2.5rem",
         fontFamily: bodyFont,
+        position: "relative", // Added for absolute positioning of background image
       }}
     >
+      {/* Custom OG Image Background */}
+      {customOgImageBase64 && (
+        <img
+          src={customOgImageBase64}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1, // Place behind other content
+          }}
+        />
+      )}
+
       {/* Header Section */}
       <div
         style={{
@@ -216,11 +243,13 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           alignItems: "center",
           gap: "1rem",
           marginBottom: "0.5rem",
+          position: "relative", // Added for z-index
+          zIndex: 1,
         }}
       >
-        {iconBase64 && (
+        {(customIconBase64 || iconBase64) && ( // Use custom icon if available, fallback to default
           <img
-            src={iconBase64}
+            src={customIconBase64 ?? iconBase64}
             width={56}
             height={56}
             style={{
@@ -246,6 +275,8 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           display: "flex",
           marginTop: "1rem",
           marginBottom: "1.5rem",
+          position: "relative", // Added for z-index
+          zIndex: 1,
         }}
       >
         <h1
@@ -275,6 +306,8 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           fontSize: 36,
           color: cfg.theme.colors[colorScheme].darkgray,
           lineHeight: 1.4,
+          position: "relative", // Added for z-index
+          zIndex: 1,
         }}
       >
         <p
@@ -300,6 +333,8 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           marginTop: "2rem",
           paddingTop: "2rem",
           borderTop: `1px solid ${cfg.theme.colors[colorScheme].lightgray}`,
+          position: "relative", // Added for z-index
+          zIndex: 1,
         }}
       >
         {/* Left side - Date and Reading Time */}

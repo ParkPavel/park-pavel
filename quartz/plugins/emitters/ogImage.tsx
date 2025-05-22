@@ -30,24 +30,35 @@ async function generateSocialImage(
   userOpts: SocialImageOptions,
 ): Promise<Readable> {
   const { width, height } = userOpts
-  const iconPath = joinSegments(QUARTZ, "static", "icon.png")
-  let iconBase64: string | undefined = undefined
-  try {
-    const iconData = await fs.readFile(iconPath)
-    iconBase64 = `data:image/png;base64,${iconData.toString("base64")}`
-  } catch (err) {
-    console.warn(chalk.yellow(`Warning: Could not find icon at ${iconPath}`))
-  }
+let customIconBase64: string | undefined = undefined
+let customOgImageBase64: string | undefined = undefined
+const customIconPath = joinSegments(QUARTZ, "components", "static", "newicon.png") // Path to custom icon
+const customOgImagePath = joinSegments(QUARTZ, "components", "static", "newog-image.png") // Path to custom OG image
+try {
+  const iconData = await fs.readFile(customIconPath)
+  customIconBase64 = `data:image/png;base64,${iconData.toString("base64")}`
+} catch (err) {
+  console.warn(chalk.yellow(`Warning: Could not find custom icon at ${customIconPath}`))
+}
+try {
+  const ogImageData = await fs.readFile(customOgImagePath)
+  customOgImageBase64 = `data:image/png;base64,${ogImageData.toString("base64")}`
+} catch (err) {
+  console.warn(chalk.yellow(`Warning: Could not find custom OG image at ${customOgImagePath}`))
+}
+let iconBase64: string | undefined = undefined // Keep original iconBase64 for fallback if needed, though custom will be prioritized
 
-  const imageComponent = userOpts.imageStructure({
-    cfg,
-    userOpts,
-    title,
-    description,
-    fonts,
-    fileData,
-    iconBase64,
-  })
+const imageComponent = userOpts.imageStructure({
+  cfg,
+  userOpts,
+  title,
+  description,
+  fonts,
+  fileData,
+  iconBase64,
+  customIconBase64, // Pass custom icon base64
+  customOgImageBase64, // Pass custom OG image base64
+})
 
   const svg = await satori(imageComponent, {
     width,

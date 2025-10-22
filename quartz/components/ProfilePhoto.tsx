@@ -2,7 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor } from "./types"
 
 const ProfilePhoto: QuartzComponent = ({ cfg }) => {
   const baseUrl = cfg.baseUrl?.endsWith("/") ? cfg.baseUrl : `${cfg.baseUrl ?? ""}/`
-  const imageUrl = `${baseUrl}static/profilePhoto.jpg`
+  const imageUrl = `https://${baseUrl}static/profilePhoto.jpg`
 
   return (
     <div className="profile-photo-container">

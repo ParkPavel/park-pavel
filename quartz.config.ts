@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       tagId: "G-PWSGWTQ0NR",
     },
     locale: "ru-RU",
-    baseUrl: "/park-pavel/",
+    baseUrl: "parkpavel.github.io/park-pavel",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

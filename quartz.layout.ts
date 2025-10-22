@@ -6,9 +6,7 @@ import ProfilePhoto from "./quartz/components/ProfilePhoto"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [
-    Component.JivoChat(), // Add Jivo chat component
-  ],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/ParkPavel/park-pavel",

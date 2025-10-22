@@ -22,7 +22,6 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
-import JivoChat from "./JivoChat"
 import Carousel from "./Carousel" // Import the new Carousel component
 
 export {
@@ -51,7 +50,6 @@ export {
   Comments,
   Flex,
   ConditionalRender,
-  JivoChat,
 }
 
 export { default as HomepageCover } from "./HomepageCover"

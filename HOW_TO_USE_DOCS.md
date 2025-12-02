@@ -218,7 +218,7 @@ ChatGPT: [даёт точные инструкции с учётом конте�
 Ты: Работаю с мобильного. 
     
     Контекст: Quartz сайт, см. 
-    https://github.com/ParkPavel/park-pavel/blob/v4/AGENT_QUICK_REFERENCE.md
+    https://github.com/ParkPavel/park-pavel/blob/HEAD/AGENT_QUICK_REFERENCE.md
 
     Задача: Добавь фото в галерею портфолио
     URLs: [список URL]

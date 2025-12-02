@@ -91,7 +91,7 @@
 ```
 Работаю с мобильного. Quartz сайт.
 
-Контекст: github.com/ParkPavel/park-pavel/blob/v4/AGENT_QUICK_REFERENCE.md
+Контекст: github.com/ParkPavel/park-pavel/blob/HEAD/AGENT_QUICK_REFERENCE.md
 
 Задача: [твоя задача]
 

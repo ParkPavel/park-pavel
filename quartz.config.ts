@@ -9,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Пак Павел",
-    pageTitleSuffix: "Цифровой сад",
+    pageTitleSuffix: " | Массаж, Йога, Ци-гун",
     enableSPA: true,
     enablePopovers: true,
     analytics: {

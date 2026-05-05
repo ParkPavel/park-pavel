@@ -42,6 +42,10 @@ export type Analytics =
       provider: "clarity"
       projectId?: string
     }
+  | {
+      provider: "yandex-metrica"
+      counterId: string
+    }
 
 export interface GlobalConfiguration {
   pageTitle: string

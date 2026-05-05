@@ -14,6 +14,9 @@ import { visit } from "unist-util-visit"
 import isAbsoluteUrl from "is-absolute-url"
 import { Root } from "hast"
 
+/** Matches any URI with a scheme (e.g. tel:, mailto:, sms:) that is not handled by isAbsoluteUrl */
+const hasUriScheme = (url: string): boolean => /^[a-z][a-z0-9+\-.]*:/i.test(url)
+
 interface Options {
   /** How to resolve Markdown paths */
   markdownLinkResolution: TransformOptions["strategy"]
@@ -99,7 +102,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 }
 
                 // don't process external links or intra-document anchors
-                const isInternal = !(isAbsoluteUrl(dest) || dest.startsWith("#"))
+                const isInternal = !(isAbsoluteUrl(dest) || dest.startsWith("#") || hasUriScheme(dest))
                 if (isInternal) {
                   dest = node.properties.href = transformLink(
                     file.data.slug!,

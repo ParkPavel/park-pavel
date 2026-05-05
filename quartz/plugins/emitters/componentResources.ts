@@ -209,6 +209,10 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     `)
   } else if (cfg.analytics?.provider === "yandex-metrica") {
     const counterId = cfg.analytics.counterId
+    const clickmap = cfg.analytics.clickmap ?? true
+    const trackLinks = cfg.analytics.trackLinks ?? true
+    const accurateTrackBounce = cfg.analytics.accurateTrackBounce ?? true
+    const webvisor = cfg.analytics.webvisor ?? false
     componentResources.afterDOMLoaded.push(`
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();
@@ -217,14 +221,15 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
       ym(${counterId}, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true
+        clickmap: ${clickmap},
+        trackLinks: ${trackLinks},
+        accurateTrackBounce: ${accurateTrackBounce},
+        webvisor: ${webvisor},
+        triggerEvent: true
       });
 
       document.addEventListener('nav', () => {
-        ym(${counterId}, 'hit', window.location.pathname);
+        ym(${counterId}, 'hit', window.location.href);
       });
     `)
   }

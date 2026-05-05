@@ -44,7 +44,16 @@ export type Analytics =
     }
   | {
       provider: "yandex-metrica"
-      counterId: string
+      /** Yandex Metrica counter ID (числовой идентификатор счётчика) */
+      counterId: number
+      /** Enable click map (карта кликов) */
+      clickmap?: boolean
+      /** Enable link tracking (отслеживание ссылок) */
+      trackLinks?: boolean
+      /** Enable accurate bounce rate (точный показатель отказов) */
+      accurateTrackBounce?: boolean
+      /** Enable webvisor (запись сессий) */
+      webvisor?: boolean
     }
 
 export interface GlobalConfiguration {
